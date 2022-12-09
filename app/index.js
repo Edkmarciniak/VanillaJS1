@@ -26,3 +26,20 @@ if (cartTotal > 100) {
 } else {
   console.log(`Your total is $${cartTotal}`);
 }
+
+const product = {
+  name: "socks",
+  price: 5.99,
+  description: "A pair of warm, fuzzy socks",
+};
+function createProductTile(product) {
+  return `
+  <figure>
+    <img src="${product.imgUrl}" alt="${product.name}">
+    <figcaption>
+      <h2>${product.name}</h2>
+      <small>${product.price}</small>
+      <p>${product.description}</p>
+    </figcaption>
+  `;
+}
