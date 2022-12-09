@@ -22,7 +22,7 @@ console.log(welcomeMsg);
 
 if (cartTotal > 100) {
   console.log(`You get a ${discount * 100}% discount!`);
-  console.log(`Your total is now $${cartTotal * (1 - discount)}`);
+  console.log(`Your total is now $${cartTotal - cartotal * discount}`);
 } else {
   console.log(`Your total is $${cartTotal}`);
 }
