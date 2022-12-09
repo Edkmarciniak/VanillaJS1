@@ -1,33 +1,4 @@
-// Create sample data for a e-commerce store
-const username = "joec1982";
-const firstName = "Joe";
-const lastName = "Cowin";
-
-const product1 = "T-Shirt";
-const product2 = "Socks";
-
-const cartTotal = 101;
-const discount = 0.1;
-
-function getFullName(fName, lName) {
-  return fName + " " + lName;
-}
-
-// Template literals with interpolation
-const welcomeMsg = `Welcome to the store, ${getFullName(firstName, lastName)}`;
-
-console.log(welcomeMsg);
-
-// TODO: Write an 'if' statement such that if the total is over $100, the user gets a 10% discount. Otherwise, there is no discount. Either way log out the correct output. Use template literals to interpolate the discount amount and the total.
-
-if (cartTotal > 100) {
-  console.log(`You get a ${discount * 100}% discount!`);
-  console.log(`Your total is now $${cartTotal - cartotal * discount}`);
-} else {
-  console.log(`Your total is $${cartTotal}`);
-}
-
-const product = {
+//const product = {
   name: "Socks",
   price: 5.99,
   description: "A pair of warm, fuzzy socks",
@@ -38,15 +9,59 @@ const product = {
 function createProductTile(prod) {
   return `
   <figure>
-    <img src="${product.imgUrl}" alt="${product.name}">
-    <figcaption>
-      <h2>${product.name}</h2>
-      <small>${product.price}</small>
-      <p>${product.description}</p>
-    </figcaption>
+      <img src="${product.imgUrl}" alt="${product.name}">
+      <figcaption>
+        <h2>${product.name}</h2>
+        <small>${product.price}</small>
+        <p>${product.description}</p>
+      </figcaption>
     </figure>
   `;
 }
 
 const productTile = createProductTile(product);
 console.log(productTile);
+
+
+
+
+
+
+
+SArrays are collections that are indexed by implicitly generated numbers
+// The first item in the array is at index 0, the second at index 1, and so on
+// Arrays are zero-indexed, meaning the first item is at index 0
+const nums = ["socks", "shoes", "pants", "shirt", "hat"];
+
+const firstItem = nums[0];
+const secondItem = nums[1];
+const thirdItem = nums[2];
+
+console.log(firstItem); // socks
+console.log(secondItem); // shoes
+console.log(thirdItem); // pants
+
+const catalog = [];
+const products = [
+  {
+    name: "Socks",
+    price: 5.99,
+    description: "A pair of warm, fuzzy socks",
+    imgUrl:
+      "https://images.unsplash.com/photo-1556740732-3f8f0a6c7b0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  },
+  {
+    name: "Pants",
+    price: 10.99,
+    description: "A nice pair of pants",
+    imgUrl:
+      "https://images.unsplash.com/photo-1556740732-3f8f0a6c7b0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  },
+  {
+    name: "Shoes",
+    price: 25.99,
+    description: "A nice pair of shoes",
+    imgUrl:
+      "https://images.unsplash.com/photo-1556740732-3f8f0a6c7b0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  },
+];
